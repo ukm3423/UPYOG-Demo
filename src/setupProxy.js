@@ -1,6 +1,6 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
 const createProxy = createProxyMiddleware({
-  target: 'https://qa.digit.org',
+  target: 'https://upyog.niua.org',
   changeOrigin: true,
 });
 module.exports = function (app) {
