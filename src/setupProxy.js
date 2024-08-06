@@ -1,7 +1,8 @@
 const { createProxyMiddleware } = require("http-proxy-middleware");
 const createProxy = createProxyMiddleware({
-  target: 'https://upyog.niua.org',
+  target: 'https://upyog.niua.org/',
   changeOrigin: true,
+  logLevel: 'debug',
 });
 module.exports = function (app) {
   [
@@ -26,4 +27,4 @@ module.exports = function (app) {
   ].forEach((location) =>
     app.use(location, createProxy)
   );
-};
+}; 
